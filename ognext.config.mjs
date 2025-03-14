@@ -7,10 +7,6 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  // This allows the app to be accessed from other devices on your network
-  // The hostname is set to '0.0.0.0' to listen on all network interfaces
-  // The port can be customized (default is 3000)
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -21,7 +17,6 @@ const nextConfig = {
     unoptimized: true,
   },
   experimental: {
-    // This is needed for the app to be accessible on your local network
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
@@ -51,4 +46,3 @@ function mergeConfig(nextConfig, userConfig) {
 }
 
 export default nextConfig
-
